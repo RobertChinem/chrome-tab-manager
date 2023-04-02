@@ -1,6 +1,6 @@
 {
   "name": "Sort tabs by URL",
-  "version": "3.0.0",
+  "version": "0.0.1",
   "description": "Sort tabs by URL",
   "manifest_version": 3,
   "short_name": "Rearrange Tabs",
