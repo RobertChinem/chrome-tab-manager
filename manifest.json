@@ -1,0 +1,21 @@
+{
+  "name": "Sort tabs by URL",
+  "version": "3.0.0",
+  "description": "Sort tabs by URL",
+  "manifest_version": 3,
+  "short_name": "Rearrange Tabs",
+  "background": {
+    "service_worker": "main.js"
+  },
+  "permissions": ["tabs"],
+  "commands": {
+    "rtf": {
+      "suggested_key": {
+        "default": "Shift+Alt+Up",
+        "windows": "Shift+Alt+Up",
+        "mac": "Command+MacCtrl+Up"
+      },
+      "description": "Sort tabs by URL"
+    }
+  }
+}
