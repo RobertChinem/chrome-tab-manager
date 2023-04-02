@@ -9,7 +9,7 @@
   },
   "permissions": ["tabs"],
   "commands": {
-    "rtf": {
+    "sort_by_url": {
       "suggested_key": {
         "default": "Shift+Alt+Up",
         "windows": "Shift+Alt+Up",
