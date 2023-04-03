@@ -24,7 +24,7 @@
         "windows": "Shift+Alt+Left",
         "mac": "Command+MacCtrl+Left"
       },
-      "description": "Move selected tab(s) to the back"
+      "description": "Group tabs by domain"
     },
     "ungroup_tabs": {
       "suggested_key": {
@@ -32,7 +32,7 @@
         "windows": "Shift+Alt+Right",
         "mac": "Command+MacCtrl+Right"
       },
-      "description": "Move selected tab(s) to the back"
+      "description": "Ungroup tabs"
     }
   }
 }
