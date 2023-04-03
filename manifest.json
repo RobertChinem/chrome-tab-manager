@@ -1,9 +1,8 @@
 {
-  "name": "Sort tabs by URL",
+  "name": "Tab manager",
   "version": "0.0.1",
-  "description": "Sort tabs by URL",
+  "description": "Tab manager",
   "manifest_version": 3,
-  "short_name": "Rearrange Tabs",
   "background": {
     "service_worker": "main.js"
   },
