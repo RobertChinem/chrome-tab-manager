@@ -7,7 +7,7 @@
   "background": {
     "service_worker": "main.js"
   },
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "tabGroups"],
   "commands": {
     "sort_by_url": {
       "suggested_key": {
@@ -16,6 +16,22 @@
         "mac": "Command+MacCtrl+Up"
       },
       "description": "Sort tabs by URL"
+    },
+    "group_by_domain": {
+      "suggested_key": {
+        "default": "Shift+Alt+Left",
+        "windows": "Shift+Alt+Left",
+        "mac": "Command+MacCtrl+Left"
+      },
+      "description": "Move selected tab(s) to the back"
+    },
+    "ungroup_tabs": {
+      "suggested_key": {
+        "default": "Shift+Alt+Right",
+        "windows": "Shift+Alt+Right",
+        "mac": "Command+MacCtrl+Right"
+      },
+      "description": "Move selected tab(s) to the back"
     }
   }
 }
