@@ -5,7 +5,8 @@
   "manifest_version": 3,
   "options_page": "options.html",
   "background": {
-    "service_worker": "main.js"
+    "service_worker": "background-service/main.js",
+    "type": "module"
   },
   "permissions": ["tabs", "tabGroups", "storage"],
   "commands": {

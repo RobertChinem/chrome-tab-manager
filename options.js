@@ -1,12 +1,14 @@
+import { Repository } from './repository.js';
+
 function handleSaveChanges() {
     const cards = Array.from(document.getElementById('list_rules').getElementsByClassName('card-domain-to-title'));
-    const rules = cards.map((card) => {
+    const rules = cards.reduce((acc, card) => {
         const domain = card.getElementsByClassName('input_domain')[0].value;
         const title = card.getElementsByClassName('input_title')[0].value;
-        console.log({ domain, title, debug: true });
-        return { domain, title };
-    });
-    console.log({ rules })
+        acc[domain] = title;
+        return acc;
+    }, {});
+    console.log(rules);
     chrome.runtime.sendMessage({ action: 'update_rules', rules });
 }
 
@@ -25,20 +27,18 @@ function handleAddNewRule(domain = "", title = "") {
 }
 
 async function loadConfigs() {
-    chrome.storage.local.get(['configs'], function (data) {
-        const configs = data.configs || {};
-        const domainRules = configs.domainRules || {};
-        for (const [domain, title] of Object.entries(domainRules)) {
-            console.log({ domain, title })
-            handleAddNewRule(domain, title);
-        }
-    });
+    const repository = new Repository();
+    const domainRules = await repository.getDomainRules();
+
+    for (const [domain, title] of Object.entries(domainRules)) {
+        handleAddNewRule(domain, title);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     const btn_save_changes = document.getElementById('btn_save_changes');
     const btn_add_new_rule = document.getElementById('btn_add_new_rule');
-    btn_save_changes.addEventListener('click', handleSaveChanges);
+    btn_save_changes.addEventListener('click', () => handleSaveChanges());
     btn_add_new_rule.addEventListener('click', () => handleAddNewRule());
 
     loadConfigs();
