@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "Tab manager",
   "manifest_version": 3,
+  "options_page": "options.html",
   "background": {
     "service_worker": "main.js"
   },
-  "permissions": ["tabs", "tabGroups"],
+  "permissions": ["tabs", "tabGroups", "storage"],
   "commands": {
     "sort_by_url": {
       "suggested_key": {
