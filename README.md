@@ -2,6 +2,6 @@
 
 ## Mac
 
-- Group the tabs by domain `control + command + left arrow`
-- Ungroup the tabs `control + command + right arrow`
-- Sort the tabs by domain `control + command + left arrow`
+- Group the tabs by domain: <kbd>Ctrl</kbd>-<kbd>CMD</kbd>-<kbd>Left</kbd>
+- Ungroup the tabs: <kbd>Ctrl</kbd>-<kbd>CMD</kbd>-<kbd>Right</kbd>
+- Sort the tabs by domain: <kbd>Ctrl</kbd>-<kbd>CMD</kbd>-<kbd>Up</kbd>
